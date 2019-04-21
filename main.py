@@ -32,7 +32,10 @@ class Detector:
                 c = StaticImpli.counter(0)
                 print("waiting for 10 times to lock. Waited: ", c, " time(s)")
                 if c == 10:
-                    ScreenLock.screen_lock()
+                    # for mac
+                    ScreenLock.screen_lock_mac()
+                    # for windows uncomment the below line
+                    # ScreenLock.screen_lock_win()
                     exit()
 
             # detecting face
